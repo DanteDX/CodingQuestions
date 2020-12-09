@@ -15,41 +15,42 @@
 //     [11, 16, 15, 6],
 //     [10,  9,  8, 7]]
 
-function matrix(n){
-    const results = [];
-    for(let i=0;i<n;i++){
+
+const spiralMatrix = n =>{
+    let results = [];
+    for(let i = 0;i<n;i++){
         results.push([]);
     }
+
     let counter = 1;
-    let startColumn = 0;
-    let endColumn = n - 1;
     let startRow = 0;
     let endRow = n - 1;
+    let startCol = 0;
+    let endCol = n - 1;
 
-    while(startColumn <= endColumn && startRow <= endRow){
-        for(let i =startColumn;i<=endColumn;i++){
+    while(startRow <= endRow && startCol <= endCol){
+        for(let i = startCol;i<=endCol;i++){
             results[startRow][i] = counter;
             counter++;
         }
         startRow++;
         for(let i = startRow;i<=endRow;i++){
-            results[i][endColumn] = counter;
+            results[i][endCol] = counter;
             counter++;
         }
-        endColumn--;
-        for(let i = endColumn;i>=startColumn;i--){
+        endCol--;
+        for(let i = endCol;i>=startCol;i--){
             results[endRow][i] = counter;
             counter++;
         }
         endRow--;
-        for(let i = endRow;i >= startRow;i--){
-            results[i][startColumn] = counter;
+        for(let i = endRow;i>=startRow;i--){
+            results[i][startCol] = counter;
             counter++;
         }
-        startColumn++;
+        startCol++;
     }
     return results;
 }
 
-
-console.log(matrix(4));
+console.log(spiralMatrix(4));

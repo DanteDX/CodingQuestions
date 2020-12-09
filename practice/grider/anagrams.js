@@ -29,11 +29,9 @@ const anagrams = (str1,str2) =>{
 
     for(let charOne in charMapOne){
         if(!charMapTwo[charOne]){
-            console.log('here2');
             return false;
         }else if(charMapTwo[charOne]){
             if(charMapTwo[charOne] !== charMapOne[charOne]){
-                console.log('here3');
                 return false;
             }
         }

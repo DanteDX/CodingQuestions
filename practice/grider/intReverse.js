@@ -1,6 +1,9 @@
 const integerReverse = x => {
     let negativeFlag = false;
-    if(x < 0) negativeFlag = true;
+    if(x < 0){
+        negativeFlag = true;
+        x = x * -1;
+    }
     let str = Number(x.toString().split("").reduce((x,y) => y + x));
     if(negativeFlag === true){
         return Number(str) * -1;
