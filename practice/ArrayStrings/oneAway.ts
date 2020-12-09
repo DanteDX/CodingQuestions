@@ -7,7 +7,7 @@ pales, pale -> true
 pale, bale -> true
 pale, bake -> false */
 
-const oneAway = (s1:string,s2:string):boolean =>{
+const oneAwayTS = (s1:string,s2:string):boolean =>{
     let index1 = 0;
     let index2 = 0;
     let editCount = 0;
@@ -43,15 +43,15 @@ const oneAway = (s1:string,s2:string):boolean =>{
 }
 
 console.log(
-    oneAway('pale', 'ple') === true, //removed
-    oneAway('pales', 'pale') === true, //inserted
-    oneAway('pale', 'bale') === true, //replaced
-    oneAway('pale', 'bake') === false,
-    // oneAway('p', '') === true,
-    // oneAway('', 'bake') === false,
-    oneAway('pr', 'r') === true,
-    oneAway('pr', 'rp') === false,
-    oneAway('brrr', 'brrss') === false,
-    oneAway('abc', 'acs') === false,
-    oneAway('aple', 'aple') === true 
+    oneAwayTS('pale', 'ple') === true, //removed
+    oneAwayTS('pales', 'pale') === true, //inserted
+    oneAwayTS('pale', 'bale') === true, //replaced
+    oneAwayTS('pale', 'bake') === false,
+    // oneAwayTS('p', '') === true,
+    // oneAwayTS('', 'bake') === false,
+    oneAwayTS('pr', 'r') === true,
+    oneAwayTS('pr', 'rp') === false,
+    oneAwayTS('brrr', 'brrss') === false,
+    oneAwayTS('abc', 'acs') === false,
+    oneAwayTS('aple', 'aple') === true 
   );
