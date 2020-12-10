@@ -13,7 +13,7 @@ class BST {
     this.root = null;
   }
 
-  insert(value) {
+  insert(value) { // O(log(n))
     let newNode = new BSTNode(value);
     if (this.root === null) {
       this.root = newNode;
@@ -42,7 +42,7 @@ class BST {
     }
   }
   // insert ends here
-  find(value) {
+  find(value) { //O(log(n)), O(n) worst case for which it becomes like a linked list
     if (this.root === null) return false;
     let current = this.root;
     let found = false;
