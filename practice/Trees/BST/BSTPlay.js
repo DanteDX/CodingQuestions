@@ -17,3 +17,14 @@ console.log("BFS Result is: ", bst.BFS());
 console.log("DFSPreOrder Result is(Recursive, Iterative):",bst.DFSPreOrderRecursive(), bst.DFSPreOrderIterative());
 console.log("DFSInOrder Result is(Recursive, Iterative):",bst.DFSInOrderRecursive(), bst.DFSInOrderIterative());
 console.log("DFSPostOrder Result is(Recursive, Iterative):",bst.DFSPostOrderRecursive(), bst.DFSPostOrderIterative());
+
+const LevelWidth = require("../LevelWidth");
+console.log(LevelWidth(bst));
+console.log('Follwing is the validation of the BST');
+const ValidataBST = require("../ValidateBST");
+console.log(ValidataBST(bst));
+/* For finding the next node of InOrderTraversal,
+first do the whole InOrderTraversal,
+do a binary search, it should take O(log(n)) as the array is sorted,
+find the next index, done !
+Time complexity will still be O(n) as we have to do the InOrderTraversal Anyway */
